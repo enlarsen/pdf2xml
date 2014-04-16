@@ -1362,6 +1362,7 @@ void MbpOutputDev::drawImageOrMask(GfxState *state, Object* ref, Stream *str,
 
 				// Save PNG file
 				save_png(pic_file, width, height, stride, data, 1, PNG_COLOR_TYPE_PALETTE, palette, 2);
+                delete data;
 			}
 		}
 
@@ -1442,6 +1443,7 @@ void MbpOutputDev::drawImageOrMask(GfxState *state, Object* ref, Stream *str,
 
 				// Save PNG file
 				save_png(pic_file, width, height, width * 3, data, 24, PNG_COLOR_TYPE_RGB, NULL, 0);
+                delete data;
 			}
 		}
 

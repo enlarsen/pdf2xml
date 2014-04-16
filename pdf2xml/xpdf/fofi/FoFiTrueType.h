@@ -9,7 +9,7 @@
 #ifndef FOFITRUETYPE_H
 #define FOFITRUETYPE_H
 
-#include <aconf.h>
+#include "aconf.h"
 
 #ifdef USE_GCC_PRAGMAS
 #pragma interface

@@ -8,7 +8,7 @@
 //
 //========================================================================
 
-#include <aconf.h>
+#include "aconf.h"
 
 #ifndef WIN32
 #  if defined(MACOS)
