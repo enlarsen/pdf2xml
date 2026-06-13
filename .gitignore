@@ -1,0 +1,12 @@
+# Build artifacts
+*.o
+*.exe
+
+# Editor/IDE
+.vs/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
