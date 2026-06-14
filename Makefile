@@ -1,19 +1,18 @@
 # Makefile for pdf2xml - Windows/MinGW build
 # Requires: g++ (with MinGW), mingw32-make
 
-SRCDIR = pdf2xml
-XPDFDIR = $(SRCDIR)/xpdf
+XPDFDIR = xpdf
 GOODIR = $(XPDFDIR)/goo
 XPDFPDF = $(XPDFDIR)/xpdf
 FOFIDIR = $(XPDFDIR)/fofi
-PNGDIR = $(SRCDIR)/image/png
-ZLIBDIR = $(SRCDIR)/image/zlib
+PNGDIR = image/png
+ZLIBDIR = image/zlib
 
 CXX = g++
 CC = gcc
 CXXFLAGS = -std=c++17 -DWIN32 -O2
 CFLAGS = -std=c11 -DWIN32 -O2
-INCLUDES = -I$(SRCDIR) -I$(XPDFDIR) -I$(GOODIR) -I$(XPDFPDF) -I$(FOFIDIR) -I$(PNGDIR) -I$(ZLIBDIR)
+INCLUDES = -I. -I$(XPDFDIR) -I$(GOODIR) -I$(XPDFPDF) -I$(FOFIDIR) -I$(PNGDIR) -I$(ZLIBDIR)
 LDFLAGS = -static
 
 # Lint-like flags to suppress known legacy warnings
@@ -67,7 +66,7 @@ XPDF_CCS = \
 	$(XPDFPDF)/XRef.cc
 
 # Main source
-MAIN_CPP = $(SRCDIR)/pdf2xml.cpp
+MAIN_CPP = pdf2xml.cpp
 
 # --- C sources ---
 C_SRCS = \
